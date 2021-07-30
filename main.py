@@ -31,14 +31,15 @@ scissors = '''
 ---.__(___)
 '''
 
-lizard = '''
+lizard = """
     _______
----/______ \
-   ///   \\_)
-   \____/ )
+---/______ \\
+   ///   \_\\_)
+   |     / )
+   \____/ /
 ---._____/
 
-'''
+"""
 
 spock = '''
 
@@ -66,9 +67,12 @@ print("*" * 30)
 print("Scissors cuts Paper\nPaper covers Rock\nRock crushes Lizard\nLizard poisons Spock\nSpock smashes Scissors\nScissors decapitates Lizard\nLizard eats Paper\nPaper disproves Spock\nSpock vaporizes Rock\n(and as it always has) Rock crushes Scissors\n")
 print("*" * 30)
 print("")
+
 # Players Turn
-player_choice = int(input(
-    "What do you choose? Type 0 for Rock, 1 for Paper, 2 for Scissors, 3 for Lizrd or 4 for Spock: "))
+player_choice = -1
+while player_choice < 0 or player_choice > 4:
+    player_choice = int(input(
+        "What do you choose? Type 0 for Rock, 1 for Paper, 2 for Scissors, 3 for Lizard or 4 for Spock: "))
 print(f"You chose: {option_names[player_choice]}")
 print(options[player_choice])
 
